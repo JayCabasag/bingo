@@ -61,21 +61,15 @@ function Router() {
     preload();
   }, []);
 
-  // navigate to app
-  useEffect(() => {
-    router.push('/(main)/home');
-  }, [router]);
+  // // navigate to app
+  // useEffect(() => {
+  //   router.push('/(main)/home');
+  // }, [router]);
 
   return (
     <Fragment>
       <Slot />
       <StatusBar style="light" />
-      <BottomSheet
-        isOpen={isOpen}
-        initialOpen
-        backgroundStyle={isDark && { backgroundColor: colors.blackGray }}>
-        <BottomSheetContents onClose={() => setOpen(false)} />
-      </BottomSheet>
     </Fragment>
   );
 }

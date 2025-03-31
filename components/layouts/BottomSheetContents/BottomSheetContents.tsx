@@ -4,6 +4,7 @@ import useColorScheme from '@/hooks/useColorScheme';
 import { windowWidth } from '@/utils/deviceInfo';
 import { colors, fonts } from '@/theme';
 import config from '@/utils/config';
+import { useBottomSheet } from '@gorhom/bottom-sheet';
 
 const styles = StyleSheet.create({
   root: {

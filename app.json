@@ -4,6 +4,7 @@
     "slug": "react-native-boilerplate",
     "version": "3.0.0",
     "owner": "wataru",
+    "scheme": "react-native-boilerplate",
     "newArchEnabled": true,
     "platforms": ["ios", "android", "web"],
     "orientation": "portrait",

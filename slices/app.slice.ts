@@ -6,6 +6,7 @@ import { User } from '@/types';
 export interface AppState {
   checked: boolean;
   loggedIn: boolean;
+  isLoading?: boolean;
   user?: User;
 }
 
@@ -13,12 +14,16 @@ const initialState: AppState = {
   checked: false,
   loggedIn: false,
   user: undefined,
+  isLoading: false,
 };
 
 const slice = createSlice({
   name: 'app',
   initialState,
   reducers: {
+    setLoading: (state: AppState, { payload }: PayloadAction<boolean>) => {
+      state.isLoading = payload;
+    },
     setLoggedIn: (state: AppState, { payload }: PayloadAction<boolean>) => {
       state.checked = true;
       state.loggedIn = payload;
